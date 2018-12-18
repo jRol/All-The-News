@@ -6,8 +6,9 @@ let db = require("../models");
 mongoose.Promise = Promise; // Set mongoose to leverage Built in JavaScript ES6 Promises
 
 // Created mongolab-spherical-33009 as MONGODB_URI
+var deployedDb = mongolab-spherical-33009;
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.mongolab-spherical-33009 || "mongodb://localhost:27017/news";
+var MONGODB_URI = process.env.deployedDb || "mongodb://localhost:27017/news";
 
 mongoose.connect(MONGODB_URI, { // Connect to the Mongo DB
   useMongoClient: true
